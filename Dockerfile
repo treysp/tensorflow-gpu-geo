@@ -27,6 +27,7 @@ RUN apt-get update \
     sqlite3 \
     tk-dev \
     unixodbc-dev \
+    libmagick++-dev \
   && install2.r --error \
     RColorBrewer \
     RandomFields \
@@ -53,5 +54,6 @@ RUN apt-get update \
     spdep \
     geoR \
     geosphere \
+    magick \
     ## from bioconductor
-    && R -e "BiocManager::install('rhdf5')"
+    && R -e "BiocManager::install('rhdf5')
