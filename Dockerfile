@@ -56,4 +56,4 @@ RUN apt-get update \
     geosphere \
     magick \
     ## from bioconductor
-    && R -e "BiocManager::install('rhdf5')
+    && R -e "BiocManager::install('rhdf5')"
