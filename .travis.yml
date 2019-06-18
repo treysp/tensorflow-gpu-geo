@@ -1,10 +1,10 @@
 services:
   - docker
 before_install:
-  - docker build -t geospatial .
+  - docker build -t tensorflow-gpu-geo .
 script:
-  - docker run -ti geospatial R --version | grep -q "3."
-  - docker run -ti geospatial R -e 'library(sf)'
+  - docker run -ti tensorflow-gpu-geo R --version | grep -q "3."
+  - docker run -ti tensorflow-gpu-geo R -e 'library(sf)'
 
 
 
