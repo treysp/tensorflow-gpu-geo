@@ -1,5 +1,5 @@
-FROM rocker/verse:3.6.0
-MAINTAINER "Carl Boettiger" cboettig@ropensci.org
+FROM rocker/tensorflow-gpu:3.6.0
+MAINTAINER "Trey Spiller" treyspiller@gmail.com
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
