@@ -28,6 +28,8 @@ RUN apt-get update \
     tk-dev \
     unixodbc-dev \
     libmagick++-dev \
+    binutils \
+    gdal-bin
   && install2.r --error \
     RColorBrewer \
     RandomFields \
@@ -55,5 +57,6 @@ RUN apt-get update \
     geoR \
     geosphere \
     magick \
+    gdalUtils \
     ## from bioconductor
     && R -e "BiocManager::install('rhdf5')"
