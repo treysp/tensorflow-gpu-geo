@@ -5,13 +5,13 @@ for Tensorflow GPU operations.
 
 This image extends the experimental [`rocker-ml` stack](https://github.com/rocker-org/ml) with geospatial-related tools, particularly those that can be difficult or slow to add on-the-fly.  As such, this image includes RStudio and the tidyverse packages. It also includes the [`magick` package](https://github.com/ropensci/magick) to enable fast image processing/manipulation operations.
 
-The full dependency tree for this image is:
-  `debian:stretch` -->
-  [`rocker/r-ver:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/r-ver) -->
-  [`rocker/rstudio:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/rstudio) -->
-  [`rocker/tidyverse:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/tidyverse) -->
-  [`rocker/cuda:3.6.0`](https://github.com/rocker-org/ml/tree/master/cuda/base) -->
-  [`this repo`](./Dockerfile)
+The full dependency tree for this image is:    
+  `debian:stretch` -->    
+  [`rocker/r-ver:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/r-ver) -->    
+  [`rocker/rstudio:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/rstudio) -->    
+  [`rocker/tidyverse:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/tidyverse) -->    
+  [`rocker/cuda:3.6.0`](https://github.com/rocker-org/ml/tree/master/cuda/base) -->    
+  [`this repo`](./Dockerfile)    
 
 ## Packages
 
@@ -57,12 +57,3 @@ gdalUtils     | Greenberg | Wrappers for the Geospatial Data Abstraction Library
 The `sf` and `rgdal` packages use a number of features from the GDAL utility, but the GDAL version they leverage is not compiled with write support for some file drivers. 
 
 This image adds a system installation of GDAL compiled with support for writing the JPEG2000 (.jp2) image format. Its capabilities can be accessed with the `gdalUtils` R package.
-
-# TO-DO
-
-### MrSID
-`MrSID` is an image compression format developed at Los Alamos National Labs and subsequently licensed by LizardTech and Extensis.
-
-This image includes support for reading the MrSID format based on tools available from the Extensis website.
-
-# END TO-DO
