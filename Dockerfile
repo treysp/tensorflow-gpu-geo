@@ -64,7 +64,7 @@ RUN apt-get update \
 
 RUN cd opt \
   && wget http://bin.extensis.com/download/developer/MrSID_DSDK-9.5.1.4427-linux.x86-64.gcc48.tar.gz \
-  && tar -xf MrSID_DSDK-9.5.1.4427-linux.x86-64.gcc48/Raster_DSDK --strip-components=1 \
+  && tar -xf MrSID_DSDK-9.5.1.4427-linux.x86-64.gcc48.tar.gz MrSID_DSDK-9.5.1.4427-linux.x86-64.gcc48/Raster_DSDK --strip-components=1 \
   && export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/Raster_DSDK/lib \
   && ldconfig \
   && PATH=$PATH:/opt/Raster_DSDK/bin \

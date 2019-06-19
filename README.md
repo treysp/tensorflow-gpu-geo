@@ -11,7 +11,8 @@ The full dependency tree for this image is:
   [`rocker/rstudio:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/rstudio) -->    
   [`rocker/tidyverse:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/tidyverse) -->    
   [`rocker/cuda:3.6.0`](https://github.com/rocker-org/ml/tree/master/cuda/base) -->    
-  [`this repo`](./Dockerfile)    
+  [`rocker/tensorflow:3.6.0`](https://github.com/rocker-org/ml/tree/master/tensorflow/gpu) -->    
+  [`this image`](./Dockerfile)    
 
 ## Packages
 
@@ -56,4 +57,4 @@ gdalUtils     | Greenberg | Wrappers for the Geospatial Data Abstraction Library
 ### GDAL
 The `sf` and `rgdal` packages use a number of features from the GDAL utility, but the GDAL version they leverage is not compiled with write support for some file drivers. 
 
-This image adds a system installation of GDAL compiled with support for writing the JPEG2000 (.jp2) image format. Its capabilities can be accessed with the `gdalUtils` R package.
+This image adds the Debian package GDAL binaries that were compiled with support for writing the JPEG2000 (.jp2) image format. Its capabilities can be accessed with the `gdalUtils` R package.
