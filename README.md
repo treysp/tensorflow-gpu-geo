@@ -6,13 +6,13 @@ for Tensorflow GPU operations.
 This image extends the experimental [`rocker-ml` stack](https://github.com/rocker-org/ml) with geospatial-related tools, particularly those that can be difficult or slow to add on-the-fly.  As such, this image includes RStudio and the tidyverse packages. It also includes the [`magick` package](https://github.com/ropensci/magick) to enable fast image processing/manipulation operations.
 
 The full dependency tree for this image is:    
-  `debian:stretch` -->    
-  [`rocker/r-ver:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/r-ver) -->    
-  [`rocker/rstudio:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/rstudio) -->    
-  [`rocker/tidyverse:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/tidyverse) -->    
-  [`rocker/cuda:3.6.0`](https://github.com/rocker-org/ml/tree/master/cuda/base) -->    
-  [`rocker/tensorflow:3.6.0`](https://github.com/rocker-org/ml/tree/master/tensorflow/gpu) -->    
-  [`this image`](./Dockerfile)    
+    `debian:stretch` -->    
+    [`rocker/r-ver:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/r-ver) -->    
+    [`rocker/rstudio:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/rstudio) -->    
+    [`rocker/tidyverse:3.6.0`](https://github.com/rocker-org/rocker-versioned/tree/master/tidyverse) -->    
+    [`rocker/cuda:3.6.0`](https://github.com/rocker-org/ml/tree/master/cuda/base) -->    
+    [`rocker/tensorflow:3.6.0`](https://github.com/rocker-org/ml/tree/master/tensorflow/gpu) -->    
+    [`this image`](./Dockerfile)    
 
 ## Packages
 
