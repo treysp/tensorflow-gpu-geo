@@ -31,6 +31,7 @@ RUN apt-get update \
     binutils \
     gdal-bin \
     wget \
+    git \
   && install2.r --error \
     RColorBrewer \
     RandomFields \
@@ -59,6 +60,15 @@ RUN apt-get update \
     geosphere \
     magick \
     gdalUtils \
+    abind \
+    fasterize \
+    fs \
+    igraph \
+    lwgeom \
+    pbapply \
+    remotes \
+    xml2 \
+  && R -e "remotes::install_github("treysp/coolit.train")" \
   && R -e "BiocManager::install('rhdf5')" \
   && cd opt \
   && wget http://bin.extensis.com/download/developer/MrSID_DSDK-9.5.1.4427-linux.x86-64.gcc48.tar.gz \
